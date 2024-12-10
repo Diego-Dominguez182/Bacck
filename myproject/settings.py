@@ -22,11 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-@g+u#k0zufoqrm1jr()xiw4#o0%kteh!y2nxvxoat%xxw%kufo'
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-DEBUG = False
-ALLOWED_HOSTS = ['bacck-pi.vercel.app', 'bacck-diego-dominguezs-projects.vercel.app']
-
-
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -45,12 +44,8 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "https://bacck-one.vercel.app",
-    "https://bacck-diego-dominguezs-projects.vercel.app",
-    "https://bacck-opal.vercel.app",
+    "http://localhost:8080",  # Add your frontend URL here
 ]
-
-
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
