@@ -82,3 +82,26 @@ def deletByID(request, idSearch):
         return Response({"Mensaje": "Build borrada exitosamente."}, status=status.HTTP_200_OK)
     except Build.DoesNotExist:
         return Response({"error": "Build no encontrada."}, status=status.HTTP_404_NOT_FOUND)
+    
+@api_view(['PUT'])
+def updateBuild(request, idSearch):
+    try:
+        build = Build.objects.get(id=idSearch)
+    except Build.DoesNotExist:
+        return Response({"error": "Build no encontrada."}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = BuildSerializer(build, data=request.data)
+    if serializer.is_valid():
+        serializer.save()  # Guardar los cambios en la base de datos
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def getBuildById(request, idSearch):
+    try:
+        build = Build.objects.get(id=idSearch)
+        serializer = BuildSerializer(build)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except Build.DoesNotExist:
+        return Response({"error": "Build no encontrada."}, status=status.HTTP_404_NOT_FOUND)

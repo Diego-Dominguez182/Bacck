@@ -8,4 +8,6 @@ urlpatterns = [
     path('builds/delete/<int:idSearch>/', views.deletByID),
     path('login/', views.login),
     path('register/', views.register, name='register'),
+    path('builds/updateBuild/<int:idSearch>', views.updateBuild),
+    path('builds/getBuildById/<int:idSearch>/', views.getBuildById),
 ]
