@@ -45,8 +45,11 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "https://app-zeta-brown.vercel.app",  # Add your frontend URL here
+    "http://bacck-one.vercel.app",
+    "http://bacck-diego-dominguezs-projects.vercel.app",
 ]
+
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
