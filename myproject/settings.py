@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-@g+u#k0zufoqrm1jr()xiw4#o0%kteh!y2nxvxoat%xxw%kufo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'bacck-pi.vercel.app', 'bacck-diego-dominguezs-projects.vercel.app'
+    ]
+
 
 
 # Application definition
@@ -44,7 +47,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",  # Add your frontend URL here
+    "https://app-zeta-brown.vercel.app/",  # Add your frontend URL here
 ]
 
 REST_FRAMEWORK = {
