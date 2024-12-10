@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://bacck-one.vercel.app",
-    "http://bacck-diego-dominguezs-projects.vercel.app",
+    "https://bacck-one.vercel.app",
+    "https://bacck-diego-dominguezs-projects.vercel.app",
 ]
 
 
