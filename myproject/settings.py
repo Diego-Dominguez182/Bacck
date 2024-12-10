@@ -22,12 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-@g+u#k0zufoqrm1jr()xiw4#o0%kteh!y2nxvxoat%xxw%kufo'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = [
-    'bacck-pi.vercel.app', 'bacck-diego-dominguezs-projects.vercel.app'
-    ]
+DEBUG = False
+ALLOWED_HOSTS = ['bacck-pi.vercel.app', 'bacck-diego-dominguezs-projects.vercel.app']
+
 
 
 
@@ -47,7 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "https://app-zeta-brown.vercel.app/",  # Add your frontend URL here
+    "https://app-zeta-brown.vercel.app",  # Add your frontend URL here
 ]
 
 REST_FRAMEWORK = {
